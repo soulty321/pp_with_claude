@@ -88,3 +88,8 @@ python3 /Users/ascentkorea/.claude/skills/notebooklm/scripts/run.py ask_question
 4. 04_SolutionA: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=30-921&m=dev
 5. 05_SolutionB: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=30-1201&m=dev
 6. 06_Impact: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=30-1299&m=dev
+
+## 이력서의 데이터를 수정할 경우, 아래 링크에 접속하여 수정합니다.
+
+1p: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=53-1605&m=dev
+2p: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=53-1664&m=dev
