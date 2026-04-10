@@ -1,0 +1,75 @@
+name: Discord Daily Report Notification
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'daily_reports/**/*.md'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get changed report files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only HEAD~1 HEAD -- 'daily_reports/**/*.md' | tr '\n' ' ')
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+
+      - name: Send to Discord
+        if: steps.changed.outputs.files != ''
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          for FILE in ${{ steps.changed.outputs.files }}; do
+            if [ ! -f "$FILE" ]; then continue; fi
+
+            CATEGORY=$(echo "$FILE" | cut -d'/' -f2)
+            DATE=$(basename "$FILE" .md)
+            CONTENT=$(cat "$FILE")
+
+            # Discord 2000자 제한 처리 — 초과 시 분할 전송
+            MAX=1900
+            TITLE="📋 Daily Report | $CATEGORY | $DATE"
+
+            # 청크 분할 전송
+            TOTAL=${#CONTENT}
+            START=0
+            CHUNK_NUM=1
+            CHUNKS=$(( (TOTAL + MAX - 1) / MAX ))
+
+            while [ $START -lt $TOTAL ]; do
+              CHUNK="${CONTENT:$START:$MAX}"
+              START=$((START + MAX))
+
+              if [ $CHUNKS -gt 1 ]; then
+                PART_TITLE="$TITLE (${CHUNK_NUM}/${CHUNKS})"
+              else
+                PART_TITLE="$TITLE"
+              fi
+
+              PAYLOAD=$(jq -n \
+                --arg title "$PART_TITLE" \
+                --arg desc "$CHUNK" \
+                '{
+                  embeds: [{
+                    title: $title,
+                    description: $desc,
+                    color: 5814783
+                  }]
+                }')
+
+              curl -s -X POST "$DISCORD_WEBHOOK_URL" \
+                -H "Content-Type: application/json" \
+                -d "$PAYLOAD"
+
+              CHUNK_NUM=$((CHUNK_NUM + 1))
+              sleep 1
+            done
+          done
