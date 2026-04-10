@@ -79,6 +79,7 @@ python3 /Users/ascentkorea/.claude/skills/notebooklm/scripts/run.py ask_question
 8. munoArt_project: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=30-1515&m=dev
 9. aiAgent_project: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=30-1516&m=dev
 10. dangen_project: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=30-1517&m=dev
+11. journeyFinder_project: https://www.figma.com/design/yC4yaCpntjTfgvpaRrn8WT/portfolio_with_claude?node-id=55-33596&m=dev
 
 ## 각 페이지의 레이아웃 및 디자인을 수정할 경우, 아래 링크에 접속하여 수정합니다.
 
