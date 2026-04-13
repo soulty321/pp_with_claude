@@ -1,0 +1,99 @@
+<svg width="990" height="432" viewBox="0 0 990 432" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="s" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#22222210"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="990" height="432" fill="#C4C4C4" fill-opacity="0.1"/>
+
+  <!-- STRATEGY label pill -->
+  <rect x="40" y="36" width="88" height="22" rx="11" fill="#EBF5FC"/>
+  <text x="84" y="51" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#37A3E2" font-weight="600" letter-spacing="0.5">STRATEGY</text>
+
+  <!-- Title -->
+  <text x="40" y="92" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="22" fill="#222222" font-weight="700">AI 파이프라인의 데이터 구조를 이해하고</text>
+  <text x="40" y="120" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="22" fill="#222222" font-weight="700">이를 시각 언어로 번역하자</text>
+
+  <!-- ── 7-step Pipeline (y=138, h=52, steps start x=50) ── -->
+
+  <!-- Step 1: 카테고리 분류 -->
+  <rect x="50" y="138" width="110" height="52" rx="8" fill="white" stroke="#D8D7E9" stroke-width="1" filter="url(#s)"/>
+  <text x="105" y="158" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">카테고리</text>
+  <text x="105" y="176" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">분류</text>
+  <!-- Arrow → Step 2 -->
+  <line x1="161" y1="164" x2="176" y2="164" stroke="#C4C4C4" stroke-width="1.5"/>
+  <path d="M172 160 L178 164 L172 168" stroke="#C4C4C4" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Step 2: 타겟 추출 -->
+  <rect x="180" y="138" width="110" height="52" rx="8" fill="white" stroke="#D8D7E9" stroke-width="1" filter="url(#s)"/>
+  <text x="235" y="158" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">타겟</text>
+  <text x="235" y="176" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">추출</text>
+  <!-- Arrow → Step 3 -->
+  <line x1="291" y1="164" x2="306" y2="164" stroke="#C4C4C4" stroke-width="1.5"/>
+  <path d="M302 160 L308 164 L302 168" stroke="#C4C4C4" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Step 3: 타겟/인텐트 분류 -->
+  <rect x="310" y="138" width="110" height="52" rx="8" fill="white" stroke="#D8D7E9" stroke-width="1" filter="url(#s)"/>
+  <text x="365" y="158" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10.5" fill="#222222">타겟/인텐트</text>
+  <text x="365" y="176" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">분류</text>
+  <!-- Arrow → Step 4 -->
+  <line x1="421" y1="164" x2="436" y2="164" stroke="#C4C4C4" stroke-width="1.5"/>
+  <path d="M432 160 L438 164 L432 168" stroke="#C4C4C4" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Step 4: 브랜드 분류 -->
+  <rect x="440" y="138" width="110" height="52" rx="8" fill="white" stroke="#D8D7E9" stroke-width="1" filter="url(#s)"/>
+  <text x="495" y="158" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">브랜드</text>
+  <text x="495" y="176" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">분류</text>
+  <!-- Arrow → Step 5 -->
+  <line x1="551" y1="164" x2="566" y2="164" stroke="#C4C4C4" stroke-width="1.5"/>
+  <path d="M562 160 L568 164 L562 168" stroke="#C4C4C4" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Step 5: CDJ 분류 -->
+  <rect x="570" y="138" width="110" height="52" rx="8" fill="white" stroke="#D8D7E9" stroke-width="1" filter="url(#s)"/>
+  <text x="625" y="158" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">CDJ</text>
+  <text x="625" y="176" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">분류</text>
+  <!-- Arrow → Step 6 -->
+  <line x1="681" y1="164" x2="696" y2="164" stroke="#C4C4C4" stroke-width="1.5"/>
+  <path d="M692 160 L698 164 L692 168" stroke="#C4C4C4" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Step 6: 감성 분류 -->
+  <rect x="700" y="138" width="110" height="52" rx="8" fill="white" stroke="#D8D7E9" stroke-width="1" filter="url(#s)"/>
+  <text x="755" y="158" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">감성</text>
+  <text x="755" y="176" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#222222">분류</text>
+  <!-- Arrow → Step 7 (blue) -->
+  <line x1="811" y1="164" x2="826" y2="164" stroke="#37A3E2" stroke-width="1.5"/>
+  <path d="M822 160 L828 164 L822 168" stroke="#37A3E2" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Step 7: 완료 (highlighted in blue) -->
+  <rect x="830" y="138" width="110" height="52" rx="8" fill="#37A3E2" filter="url(#s)"/>
+  <!-- Checkmark path -->
+  <path d="M871 163 L879 171 L899 149" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="885" y="182" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10" fill="white" font-weight="600">완료</text>
+
+  <!-- ── Hypothesis block ── (y=210, height=182) -->
+  <rect x="40" y="210" width="910" height="182" rx="12" fill="#EBF5FC" stroke="#B8DDF5" stroke-width="1"/>
+  <rect x="40" y="210" width="4" height="182" rx="2" fill="#37A3E2"/>
+
+  <!-- Hypothesis header -->
+  <text x="62" y="237" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="14" fill="#37A3E2" font-weight="700">가설 (Hypothesis)</text>
+
+  <!-- Divider -->
+  <line x1="62" y1="248" x2="930" y2="248" stroke="#B8DDF5" stroke-width="1"/>
+
+  <!-- IF row -->
+  <rect x="62" y="258" width="32" height="20" rx="4" fill="#37A3E2"/>
+  <text x="78" y="272" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="white" font-weight="700">IF</text>
+  <text x="104" y="272" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#1E4F6B">디자이너가 AI 파이프라인의 7단계 데이터 구조를 직접 이해하고,</text>
+
+  <!-- THEN row -->
+  <rect x="62" y="288" width="46" height="20" rx="4" fill="#5BB8E8"/>
+  <text x="85" y="302" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="white" font-weight="700">THEN</text>
+  <text x="118" y="302" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#1E4F6B">각 단계의 분류 결과를 CDJ 차트와 데이터 수정 테이블로 번역하면,</text>
+
+  <!-- Result row (highlight rect drawn first, text on top) -->
+  <rect x="62" y="328" width="504" height="30" rx="6" fill="#37A3E2" fill-opacity="0.12"/>
+  <text x="72" y="348" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="20" fill="#37A3E2" font-weight="700">→</text>
+  <text x="98" y="348" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="14" fill="#222222" font-weight="700">누구나 10분 내에 완성형 CDJ 보고서를 생성할 수 있다.</text>
+</svg>

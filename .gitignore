@@ -7,3 +7,9 @@
 # OS files
 .DS_Store
 Thumbs.db
+
+# Private environment files
+env.local
+env_local
+.env.local
+.env

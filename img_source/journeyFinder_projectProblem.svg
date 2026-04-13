@@ -1,0 +1,60 @@
+<svg width="990" height="432" viewBox="0 0 990 432" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="s" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#22222210"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="990" height="432" fill="#C4C4C4" fill-opacity="0.1"/>
+
+  <!-- PROBLEM label pill -->
+  <rect x="40" y="36" width="84" height="22" rx="11" fill="#FEE8EC"/>
+  <text x="82" y="51" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#EF677F" font-weight="600" letter-spacing="0.5">PROBLEM</text>
+
+  <!-- Title -->
+  <text x="40" y="92" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="22" fill="#222222" font-weight="700">방대한 검색 데이터는 있지만</text>
+  <text x="40" y="120" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="22" fill="#222222" font-weight="700">완성형 여정 보고서로 만들 수 없는 구조</text>
+
+  <!-- ── Card 1: 소요 시간 ── (x=40, y=148, 292×106) -->
+  <rect x="40" y="148" width="292" height="106" rx="12" fill="white" stroke="#F0BEC5" stroke-width="1" filter="url(#s)"/>
+  <!-- Clock icon -->
+  <circle cx="64" cy="170" r="10" fill="#FFF0F2"/>
+  <circle cx="64" cy="170" r="7" stroke="#EF677F" stroke-width="1.5" fill="none"/>
+  <line x1="64" y1="170" x2="64" y2="165" stroke="#EF677F" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="64" y1="170" x2="68" y2="173" stroke="#EF677F" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Card 1 text -->
+  <text x="82" y="168" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7D7D85">소요 시간</text>
+  <text x="56" y="215" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="32" fill="#EF677F" font-weight="700">1~2일</text>
+  <text x="56" y="238" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7D7D85">CDJ 차트 1건 작성 기준</text>
+
+  <!-- ── Card 2: 수작업 의존 ── (x=349, y=148, 292×106) -->
+  <rect x="349" y="148" width="292" height="106" rx="12" fill="white" stroke="#D8D7E9" stroke-width="1" filter="url(#s)"/>
+  <!-- Pencil icon -->
+  <circle cx="373" cy="170" r="10" fill="#FFF0F2"/>
+  <path d="M370 177 L374.5 165 L381 171.5 L376.5 183Z" stroke="#EF677F" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+  <line x1="370" y1="177" x2="368.5" y2="181" stroke="#EF677F" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Card 2 text -->
+  <text x="391" y="168" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7D7D85">수작업 의존</text>
+  <text x="365" y="206" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#222222" font-weight="600">키워드 분류부터 시각화까지</text>
+  <text x="365" y="228" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#222222">전 과정이 수동 의존</text>
+
+  <!-- ── Card 3: 결과 불일치 ── (x=658, y=148, 292×106) -->
+  <rect x="658" y="148" width="292" height="106" rx="12" fill="white" stroke="#D8D7E9" stroke-width="1" filter="url(#s)"/>
+  <!-- Not-equal icon -->
+  <circle cx="682" cy="170" r="10" fill="#FFF0F2"/>
+  <line x1="676.5" y1="167" x2="687.5" y2="167" stroke="#EF677F" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="676.5" y1="173" x2="687.5" y2="173" stroke="#EF677F" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="685" y1="162" x2="679" y2="178" stroke="#EF677F" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Card 3 text -->
+  <text x="700" y="168" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7D7D85">결과 불일치</text>
+  <text x="674" y="206" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#222222" font-weight="600">작업자마다 다른 분류 기준</text>
+  <text x="674" y="228" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#222222">동일 데이터에서 상이한 결과</text>
+
+  <!-- ── Quote block ── (y=274, height=108) -->
+  <rect x="40" y="274" width="910" height="112" rx="10" fill="#FFF5F7" stroke="#F5C0C8" stroke-width="1"/>
+  <rect x="40" y="274" width="4" height="112" rx="2" fill="#EF677F"/>
+  <text x="62" y="308" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#444444">"같은 키워드인데 담당자마다 CDJ 단계를 다르게 분류해요.</text>
+  <text x="62" y="330" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#444444">보고서를 합칠 때마다 기준을 맞추느라 시간이 더 걸립니다."</text>
+  <text x="62" y="364" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7D7D85">— 리스닝마인드 분석 담당자</text>
+</svg>
