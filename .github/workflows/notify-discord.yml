@@ -22,6 +22,11 @@ jobs:
           FILES=$(git diff --name-only HEAD~1 HEAD -- 'daily_reports/**/*.md' | tr '\n' ' ')
           echo "files=$FILES" >> $GITHUB_OUTPUT
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Send to Discord
         if: steps.changed.outputs.files != ''
         env:
@@ -32,7 +37,7 @@ jobs:
 
             CATEGORY=$(echo "$FILE" | cut -d'/' -f2)
             DATE=$(basename "$FILE" .md)
-            CONTENT=$(cat "$FILE")
+            CONTENT=$(python scripts/md_to_discord.py "$FILE")
 
             # Discord 2000자 제한 처리 — 초과 시 분할 전송
             MAX=1900
@@ -72,4 +77,22 @@ jobs:
               CHUNK_NUM=$((CHUNK_NUM + 1))
               sleep 1
             done
+          done
+
+      - name: Sync jobs to Notion
+        if: steps.changed.outputs.files != ''
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_JOBS_DB_ID: ${{ secrets.NOTION_JOBS_DB_ID }}
+          NOTION_LOG_DB_ID: ${{ secrets.NOTION_LOG_DB_ID }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ] || [ -z "$NOTION_JOBS_DB_ID" ]; then
+            echo "Notion secrets not configured — skipping sync"
+            exit 0
+          fi
+          pip install -q notion-client
+          for FILE in ${{ steps.changed.outputs.files }}; do
+            if [[ "$FILE" == *"/jobs/"* ]] && [ -f "$FILE" ]; then
+              python scripts/notion_sync.py "$FILE"
+            fi
           done
