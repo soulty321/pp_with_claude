@@ -426,22 +426,27 @@ export const projectData = [
         coverImage: project5Cover,
         tags: ["dangen_project_TAG_1", "dangen_project_TAG_2", "dangen_project_TAG_3"]
       },
+      // Page 1: 문제 발굴
       problem: {
         title: "dangen_project_PROBLEM_TITLE",
         background: "dangen_project_PROBLEM_BACKGROUND",
         quantitative: "dangen_project_PROBLEM_QUANT",
         qualitative: "dangen_project_PROBLEM_QUAL",
-        image: "/stitch_source/p5Problem.svg"
+        image: "/stitch_source/dangen_projectProblem.svg"
       },
+      // Page 2: 사용자 리서치
       strategy: {
+        sectionLabel: "dangen_project_SECTION_RESEARCH",
         title: "dangen_project_STRATEGY_TITLE",
         description: "dangen_project_STRATEGY_DESC",
         cause: "dangen_project_STRATEGY_CAUSE",
         causeDesc: "dangen_project_STRATEGY_CAUSE_DESC",
         hypothesis: "dangen_project_STRATEGY_HYPO",
-        image: "/stitch_source/p5Strategy.svg"
+        image: "/stitch_source/dangen_projectStrategy.svg"
       },
+      // Page 3: 개선 제안
       solutionA: {
+        sectionLabel: "dangen_project_SECTION_PROPOSAL",
         title: "dangen_project_SOL_A_TITLE",
         summary: "dangen_project_SOL_A_SUMMARY",
         description: [
@@ -449,25 +454,10 @@ export const projectData = [
           { title: "dangen_project_SOL_A_DESC_2_TITLE", desc: "dangen_project_SOL_A_DESC_2_DESC" },
           { title: "dangen_project_SOL_A_DESC_3_TITLE", desc: "dangen_project_SOL_A_DESC_3_DESC" }
         ],
-        image: "/stitch_source/p5Solution.svg"
+        image: "/stitch_source/dangen_projectSolution.svg"
       },
-      solutionB: {
-        title: "dangen_project_SOL_B_TITLE",
-        summary: "dangen_project_SOL_B_SUMMARY",
-        description: [
-          { title: "dangen_project_SOL_B_DESC_1_TITLE", desc: "dangen_project_SOL_B_DESC_1_DESC" },
-          { title: "dangen_project_SOL_B_DESC_2_TITLE", desc: "dangen_project_SOL_B_DESC_2_DESC" }
-        ],
-        image: null
-      },
-      impact: {
-        outcome: [
-            { title: "dangen_project_IMPACT_OUTCOME_1_TITLE", desc: "dangen_project_IMPACT_OUTCOME_1_DESC", image: "/stitch_source/p5Impact-1.svg" },
-            { title: "dangen_project_IMPACT_OUTCOME_2_TITLE", desc: "dangen_project_IMPACT_OUTCOME_2_DESC", image: "/stitch_source/p5Impact-2.svg" },
-            { title: "dangen_project_IMPACT_OUTCOME_3_TITLE", desc: "dangen_project_IMPACT_OUTCOME_3_DESC", image: "/stitch_source/p5Impact-3.svg" }
-        ],
-        lesson: "dangen_project_IMPACT_LESSON"
-      },
+      solutionB: null,
+      impact: null,
       isdangen_projectProject: true
     },
     {
@@ -484,47 +474,11 @@ export const projectData = [
         coverImage: project6Cover,
         tags: ["munoArt_project_TAG_1", "munoArt_project_TAG_2", "munoArt_project_TAG_3"]
       },
-      // Page 2: Problem Definition
-      problem: {
-        title: "munoArt_project_PROBLEM_TITLE",
-        background: "munoArt_project_PROBLEM_BACKGROUND",
-        quantitative: "munoArt_project_PROBLEM_QUANT",
-        quantitativeLabel: "PROBLEM_BLOCK_VOC",
-        qualitative: "munoArt_project_PROBLEM_QUAL",
-        image: "/stitch_source/munoArt_projectProblem.svg"
-      },
-      // Page 3: Strategy & Hypothesis
-      strategy: {
-        title: "munoArt_project_STRATEGY_TITLE",
-        description: "munoArt_project_STRATEGY_DESC",
-        cause: "munoArt_project_STRATEGY_CAUSE",
-        causeDesc: "munoArt_project_STRATEGY_CAUSE_DESC",
-        hypothesis: "munoArt_project_STRATEGY_HYPO",
-        image: "/stitch_source/munoArt_projectStrategy.svg"
-      },
-      // Page 4: Solution A
-      solutionA: {
-        title: "munoArt_project_SOL_A_TITLE",
-        summary: "munoArt_project_SOL_A_SUMMARY",
-        description: [
-          { title: "munoArt_project_SOL_A_DESC_1_TITLE", desc: "munoArt_project_SOL_A_DESC_1_DESC" },
-          { title: "munoArt_project_SOL_A_DESC_2_TITLE", desc: "munoArt_project_SOL_A_DESC_2_DESC" }
-        ],
-        image: null
-      },
-      // Page 5: Solution B
-      solutionB: {
-        title: "munoArt_project_SOL_B_TITLE",
-        summary: "munoArt_project_SOL_B_SUMMARY",
-        description: [
-          { title: "munoArt_project_SOL_B_DESC_1_TITLE", desc: "munoArt_project_SOL_B_DESC_1_DESC" },
-          { title: "munoArt_project_SOL_B_DESC_2_TITLE", desc: "munoArt_project_SOL_B_DESC_2_DESC" }
-        ],
-        image: "/stitch_source/munoArt_projectSolutionB.svg",
-        asIs: { image: "/stitch_source/munoArt_projectSolutionB_asis.svg", desc: "munoArt_project_SOL_B_ASIS_DESC" },
-        toBe:  { image: "/stitch_source/munoArt_projectSolutionB_tobe.svg",  desc: "munoArt_project_SOL_B_TOBE_DESC" }
-      },
-      // Page 6: Impact & Lesson
+      problem: null,
+      strategy: null,
+      solutionA: null,
+      solutionB: null,
+      // Page 2: 데이터 기반 성과
       impact: {
         outcome: [
           { title: "munoArt_project_IMPACT_OUTCOME_1_TITLE", desc: "munoArt_project_IMPACT_OUTCOME_1_DESC", image: "/stitch_source/munoArt_projectImpact1.svg" },

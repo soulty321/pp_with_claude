@@ -35,13 +35,28 @@ def rate_limited_call(fn, *args, max_retries: int = 3, **kwargs):
                 raise
 
 
+def query_database(client: Client, database_id: str, filter_obj: dict, page_size: int = 1) -> dict:
+    """Notion DB 쿼리 — httpx 직접 호출 (notion-client v2/v3 호환)."""
+    def _query():
+        resp = client.client.post(
+            f"https://api.notion.com/v1/databases/{database_id}/query",
+            json={"filter": filter_obj, "page_size": page_size},
+            headers={
+                "Authorization": f"Bearer {client.options.auth}",
+                "Notion-Version": "2022-06-28",
+                "Content-Type": "application/json",
+            },
+        )
+        resp.raise_for_status()
+        return resp.json()
+    return rate_limited_call(_query)
+
+
 def find_page_by_url(client: Client, database_id: str, url: str) -> str | None:
     """URL 속성으로 기존 페이지 검색. 있으면 page_id, 없으면 None."""
-    response = rate_limited_call(
-        client.databases.query,
-        database_id=database_id,
-        filter={"property": "링크", "url": {"equals": url}},
-        page_size=1,
+    response = query_database(
+        client, database_id,
+        filter_obj={"property": "링크", "url": {"equals": url}},
     )
     results = response.get("results", [])
     return results[0]["id"] if results else None
@@ -49,11 +64,9 @@ def find_page_by_url(client: Client, database_id: str, url: str) -> str | None:
 
 def find_log_by_date(client: Client, database_id: str, date_str: str) -> str | None:
     """날짜(Title)로 일일 수집 로그 검색."""
-    response = rate_limited_call(
-        client.databases.query,
-        database_id=database_id,
-        filter={"property": "날짜", "title": {"equals": date_str}},
-        page_size=1,
+    response = query_database(
+        client, database_id,
+        filter_obj={"property": "날짜", "title": {"equals": date_str}},
     )
     results = response.get("results", [])
     return results[0]["id"] if results else None
@@ -129,9 +142,6 @@ def upsert_daily_log(
         "MEDIUM 건수": {"number": medium_count},
         "신규 공고 수": {"number": new_count},
     }
-
-    if github_url:
-        properties["리포트 원문"] = {"url": github_url}
 
     if existing:
         return rate_limited_call(

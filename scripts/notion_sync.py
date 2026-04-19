@@ -18,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts.parsers.job_report_parser import parse_job_report
-from scripts.notion_client import (
+from scripts.notion_api import (
     get_client,
     find_page_by_url,
     create_job_page,

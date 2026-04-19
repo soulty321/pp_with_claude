@@ -1,25 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 562 315" width="562" height="315">
-  <text x="281" y="28" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#888888" text-anchor="middle" letter-spacing="2">VIRAL REACH — CAC = 0</text>
+  <!-- Title -->
+  <text x="281" y="28" font-family="'Inter','Noto Sans',sans-serif" font-size="13" font-weight="700" fill="#888888" text-anchor="middle" letter-spacing="2">ENGAGEMENT BREAKDOWN</text>
 
+  <!-- Horizontal bar chart -->
   <!-- Likes bar -->
-  <text x="60" y="70" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#555555">👍 좋아요 (Likes)</text>
-  <rect x="60" y="82" width="442" height="32" rx="4" fill="#F0F0F0"/>
-  <rect x="60" y="82" width="442" height="32" rx="4" fill="#111111"/>
-  <text x="508" y="103" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#111111" text-anchor="end">786</text>
+  <text x="30" y="82" font-family="'Inter',sans-serif" font-size="12" font-weight="600" fill="#888888">Likes</text>
+  <rect x="100" y="68" width="390" height="24" rx="6" fill="#111111"/>
+  <text x="500" y="85" font-family="'Inter',sans-serif" font-size="14" font-weight="800" fill="#111111">786</text>
 
   <!-- Comments bar -->
-  <text x="60" y="144" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#555555">💬 댓글 (Comments)</text>
-  <rect x="60" y="156" width="442" height="32" rx="4" fill="#F0F0F0"/>
-  <rect x="60" y="156" width="85" height="32" rx="4" fill="#37A3E2"/>
-  <text x="153" y="177" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#37A3E2" text-anchor="end">151</text>
+  <text x="30" y="132" font-family="'Inter',sans-serif" font-size="12" font-weight="600" fill="#888888">Comments</text>
+  <rect x="100" y="118" width="75" height="24" rx="6" fill="#37A3E2"/>
+  <text x="185" y="135" font-family="'Inter',sans-serif" font-size="14" font-weight="800" fill="#37A3E2">151</text>
 
   <!-- Shares bar -->
-  <text x="60" y="218" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#555555">🔗 공유 (Shares)</text>
-  <rect x="60" y="230" width="442" height="32" rx="4" fill="#F0F0F0"/>
-  <rect x="60" y="230" width="42" height="32" rx="4" fill="#888888"/>
-  <text x="110" y="251" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#888888" text-anchor="end">75</text>
+  <text x="30" y="182" font-family="'Inter',sans-serif" font-size="12" font-weight="600" fill="#888888">Shares</text>
+  <rect x="100" y="168" width="37" height="24" rx="6" fill="#555555"/>
+  <text x="147" y="185" font-family="'Inter',sans-serif" font-size="14" font-weight="800" fill="#555555">75</text>
 
-  <!-- Total badge -->
-  <rect x="60" y="280" width="442" height="26" rx="4" fill="#F9F9F9" stroke="#E5E7EB" stroke-width="1"/>
-  <text x="281" y="297" font-family="'Inter', sans-serif" font-size="12" fill="#555555" text-anchor="middle">Total Organic Engagement: <tspan font-weight="800" fill="#111111">1,012</tspan> — 별도 마케팅 비용 없이 달성</text>
+  <!-- Divider -->
+  <line x1="30" y1="220" x2="532" y2="220" stroke="#F0F0F0" stroke-width="1"/>
+
+  <!-- Total engagement summary -->
+  <rect x="120" y="240" width="322" height="56" rx="14" fill="#F5F5F7"/>
+  <text x="281" y="264" font-family="'Inter',sans-serif" font-size="28" font-weight="800" fill="#111111" text-anchor="middle">1,012</text>
+  <text x="281" y="284" font-family="'Inter',sans-serif" font-size="11" fill="#888888" text-anchor="middle">Total Engagement (Single Post)</text>
 </svg>

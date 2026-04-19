@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Draft Visualization (Verified Content) - MunoArt & Dangen</title>
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --slide-bg: #ffffff;
+            --primary: #4a90e2;
+            --secondary: #6c757d;
+            --accent: #ff6b6b;
+            --text: #333;
+            --placeholder: #e9ecef;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+        .project-title {
+            width: 100%;
+            max-width: 1200px;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: -20px;
+        }
+        .slide {
+            width: 1200px;
+            height: 675px; /* 16:9 ratio */
+            background-color: var(--slide-bg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative;
+            display: grid;
+            gap: 20px;
+        }
+        .slide-header {
+            font-size: 14px;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .slide-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0;
+            color: var(--text);
+            line-height: 1.2;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            height: 100%;
+        }
+        .placeholder-box {
+            background-color: var(--placeholder);
+            border: 2px dashed #adb5bd;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #6c757d;
+            font-size: 18px;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        .text-section h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        .text-section p {
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+            font-size: 15px;
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2f7;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .stat-label {
+            font-size: 13px;
+            color: var(--secondary);
+            margin-top: 4px;
+        }
+        .quote {
+            font-style: italic;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin: 10px 0;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .footer-note {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            font-size: 12px;
+            color: #999;
+        }
+        strong { color: var(--text); }
+        .placeholder-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MUNOART PROJECT -->
+    <h1 class="project-title">Project 1: 무노아트 (MunoArt)</h1>
+
+    <!-- MunoArt Page 1 -->
+    <div class="slide">
+        <div class="slide-header">01 — Overview</div>
+        <h2 class="slide-title">Interactive Design Pipeline<br>팬슈머와 함께 만드는 브랜드</h2>
+        <div class="content-grid" style="grid-template-columns: 1.2fr 0.8fr;">
+            <div class="placeholder-box">
+                <img src="../img_source/munoart.svg" alt="MunoArt Key Visual">
+            </div>
+            <div class="text-section">
+                <span class="badge">Approach</span>
+                <h3>"댓글 달아주시면 그려오겠습니다"</h3>
+                <p>일방적인 창작이 아닌, <strong>'요청 → 창작 → 검증 → 판매'</strong>로 이어지는 선순환 파이프라인 구축.</p>
+                <span class="badge">Differentiation</span>
+                <p>기존의 귀여운 스타일 탈피, 악기의 금속성/나무 질감을 '기계적 메커니즘'과 결합하여 남성 및 전공자 타겟 확장.</p>
+                <span class="badge">Target</span>
+                <p>#Z세대 #다꾸 #클래식전공자 #기계적미학</p>
+            </div>
+        </div>
+        <div class="footer-note">The 'What' & 'Why'</div>
+    </div>
+
+    <!-- MunoArt Page 2 -->
+    <div class="slide">
+        <div class="slide-header">02 — Performance & Insights</div>
+        <h2 class="slide-title">데이터 기반의 운영 성과와 인사이트</h2>
+        <div class="content-grid">
+            <div class="text-section">
+                <span class="badge">Impact 01: MVP Strategy</span>
+                <h3>Build-Measure-Learn 실행</h3>
+                <p>완벽한 제품이 아닌 MVP(일러스트 시안)를 먼저 공개하고 VOC를 측정. 페이스북 '친구 태그(@)' 문화를 활용해 유저가 스스로 마케터가 되는 구조 설계.</p>
+                
+                <span class="badge" style="margin-top: 10px;">Impact 02: Fan VOC</span>
+                <p class="quote">"폰케이스 나오나요? 현악은 없는 건가요?" <strong>(직접적 구매 시그널)</strong></p>
+                <p class="quote">"악기 하는 친구들에게 알려줘야겠다" <strong>(자발적 바이럴 증거)</strong></p>
+                <div class="placeholder-box" style="height: 120px; font-size: 14px;">
+                    <img src="../img_source/munoArt_projectImpact2.svg" alt="MunoArt Impact 2">
+                </div>
+            </div>
+            <div class="text-section">
+                <span class="badge">Impact 03: Growth Data</span>
+                <h3>정량적 성과 지표 (Verified)</h3>
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">50.52%</div>
+                        <div class="stat-label">4년 평균 영업이익률</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">+72.5%</div>
+                        <div class="stat-label">바이럴 구간 연 매출 성장률</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">CAC = 0</div>
+                        <div class="stat-label">광고비 없이 95% 오가닉 도달</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">1,100+</div>
+                        <div class="stat-label">오가닉 반응 (단일 게시물)</div>
+                    </div>
+                </div>
+                <div class="placeholder-box" style="height: 150px; margin-top: 15px; font-size: 14px;">
+                    <img src="../img_source/munoArt_projectImpact3.svg" alt="MunoArt Impact 3">
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">Designer as a Business Partner</div>
+    </div>
+
+    <!-- DANGEN PROJECT -->
+    <h1 class="project-title" style="border-bottom-color: var(--accent);">Project 2: 당근 모임 개선 (사이드)</h1>
+
+    <!-- Dangen Page 1 -->
+    <div class="slide">
+        <div class="slide-header" style="color: var(--accent);">01 — Problem Definition</div>
+        <h2 class="slide-title">데이터가 가리킨 2회차 방문으로<br>이어지지 않는 진짜 원인</h2>
+        <div class="content-grid" style="grid-template-columns: 0.8fr 1.2fr;">
+            <div class="text-section">
+                <span class="badge" style="background: #fff0f0;">The Problem</span>
+                <p>신규 유저가 모임의 핵심 가치를 느끼기 전, <strong>'어색함'</strong>과 <strong>'목표 부재'</strong>로 인해 1회성 방문 후 이탈하는 현상 발생.</p>
+                <div class="quote">"기존 멤버들끼리 너무 친해 보여서 끼기 힘들어요."</div>
+                <div class="quote">"뚜렷한 목표가 없으니 한 번 가보고 안 가게 돼요."</div>
+                <div class="placeholder-box" style="height: 200px; font-size: 14px; margin-top: 15px; border:none; background:none;">
+                    <img src="../img_source/dangen_projectProblem.svg" alt="Dangen Problem">
+                </div>
+            </div>
+            <div class="placeholder-box">
+                <div style="text-align: left;">
+                    <h4 style="margin:0 0 10px 0;">[Problem Summary]</h4>
+                    <ul style="font-size: 15px; margin:0; padding-left:20px;">
+                        <li>월평균 참여자 1.4명 정체</li>
+                        <li>퍼널 분석 결과 1회 참여 후 재방문율 급감</li>
+                        <li>모임 운영 데이터 기반 정량 분석</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">심리적 장벽을 넘는 '3번의 작은 성공'</div>
+    </div>
+
+    <!-- Dangen Page 2 -->
+    <div class="slide">
+        <div class="slide-header" style="color: var(--accent);">02 — User Research</div>
+        <h2 class="slide-title">7명의 심층 인터뷰로 발견한<br>'Aha-Moment'의 조건</h2>
+        <div class="content-grid">
+            <div class="placeholder-box" style="border:none; background:none;">
+                <img src="../img_source/dangen_projectStrategy.svg" alt="Dangen Strategy">
+            </div>
+            <div class="text-section">
+                <span class="badge" style="background: #fff0f0;">Research Insight</span>
+                <p><strong>Design Thinking 기반 리서치</strong>: 5 Whys 심층 인터뷰를 통해 유저가 모임에서 발견하는 핵심 가치를 구조화했습니다.</p>
+                <ul style="font-size: 14px; color: #555; line-height: 1.8; padding-left: 20px;">
+                    <li><strong>정성적 발견</strong>: 소속감, 루틴 형성, 타인으로부터의 자극(신뢰)이 재방문의 결정적 요인임을 확인.</li>
+                    <li><strong>임계점 도출</strong>: 유저는 <strong>최소 3회 참여 후</strong>에야 '함께'의 본질적 가치를 체감함.</li>
+                </ul>
+                <p style="margin-top:15px; border-top: 1px solid #eee; padding-top: 15px;">→ <strong>가설</strong>: 3회 완주를 돕는 장치가 리텐션의 결정적 열쇠이다.</p>
+            </div>
+        </div>
+        <div class="footer-note">Empathize → Define → Ideation</div>
+    </div>
+
+    <!-- Dangen Page 3 -->
+    <div class="slide">
+        <div class="slide-header" style="color: var(--accent);">03 — Improvement Proposal</div>
+        <h2 class="slide-title">3-Step Challenge:<br>막연한 방문을 '도전'으로 바꾸다</h2>
+        <div class="content-grid" style="grid-template-columns: 1.2fr 0.8fr;">
+            <div class="placeholder-box" style="border:none; background:none;">
+                <img src="../img_source/dangen_projectSolution.svg" alt="Dangen Solution">
+            </div>
+            <div class="text-section">
+                <span class="badge" style="background: #fff0f0;">UX Strategy</span>
+                <p><strong>Hook Model</strong> 기반의 3회 출석 게이미피케이션을 통해 신규 유저의 심리적 진입 장벽을 낮추고 완결 욕구를 자극했습니다.</p>
+                
+                <div class="stat-card" style="margin-top:15px; border-left-color: var(--accent);">
+                    <div class="stat-value" style="color: var(--accent);">300% Growth</div>
+                    <div class="stat-label">참여자 수 (1.4명 → 4.2명)</div>
+                </div>
+                <p style="font-size: 13px; margin-top: 10px; color: #666;">
+                    * <strong>Result</strong>: 지역 랭킹 1위 달성 및 헤비 유저층(40회 이상 참여) 형성.
+                </p>
+                <div class="placeholder-box" style="height: 120px; margin-top: 10px; border:none; background:none;">
+                    <img src="../img_source/dangen_projectImpact-1.svg" alt="Dangen Impact 1">
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">커뮤니티를 움직이는 '작지만 확실한 명분'</div>
+    </div>
+
+</body>
+</html>

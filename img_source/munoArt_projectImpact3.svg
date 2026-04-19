@@ -1,29 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 562 315" width="562" height="315">
-  <text x="281" y="28" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#888888" text-anchor="middle" letter-spacing="2">4-YEAR AVG. OPERATING PROFIT MARGIN</text>
+  <!-- Title -->
+  <text x="281" y="28" font-family="'Inter','Noto Sans',sans-serif" font-size="13" font-weight="700" fill="#888888" text-anchor="middle" letter-spacing="2">KEY PERFORMANCE METRICS</text>
 
-  <!-- Gauge arc background -->
-  <circle cx="281" cy="195" r="120" fill="none" stroke="#F0F0F0" stroke-width="22"
-    stroke-dasharray="377 628" stroke-dashoffset="-125" stroke-linecap="round"/>
+  <!-- Metric 1: 영업이익률 — Semi-circle gauge -->
+  <g transform="translate(140, 150)">
+    <!-- Background arc -->
+    <path d="M-70,0 A70,70 0 0,1 70,0" fill="none" stroke="#EEEEEE" stroke-width="14" stroke-linecap="round"/>
+    <!-- Filled arc (50.52% of 180deg = ~91deg) -->
+    <path d="M-70,0 A70,70 0 0,1 0.5,-70" fill="none" stroke="#111111" stroke-width="14" stroke-linecap="round"/>
+    <text x="0" y="-10" font-family="'Inter',sans-serif" font-size="28" font-weight="800" fill="#111111" text-anchor="middle">50.52%</text>
+    <text x="0" y="12" font-family="'Inter',sans-serif" font-size="10" fill="#888888" text-anchor="middle">Avg. Operating Margin</text>
+  </g>
 
-  <!-- Industry average arc (approx 20-30%, using 25%) -->
-  <circle cx="281" cy="195" r="120" fill="none" stroke="#E5E7EB" stroke-width="22"
-    stroke-dasharray="94 628" stroke-dashoffset="-125" stroke-linecap="round"/>
-  <!-- 50.52% arc: 50.52/100 * 377 = 190.4 -->
-  <circle cx="281" cy="195" r="120" fill="none" stroke="#111111" stroke-width="22"
-    stroke-dasharray="191 628" stroke-dashoffset="-125" stroke-linecap="round"/>
+  <!-- Metric 2: 매출 성장률 — Bar chart -->
+  <g transform="translate(370, 60)">
+    <!-- Y-axis labels -->
+    <text x="0" y="98" font-family="'Inter',sans-serif" font-size="9" fill="#AAAAAA" text-anchor="end">0</text>
+    <text x="0" y="18" font-family="'Inter',sans-serif" font-size="9" fill="#AAAAAA" text-anchor="end">350</text>
+    <!-- Bars -->
+    <rect x="15" y="44" width="40" height="54" rx="4" fill="#CCCCCC"/>
+    <text x="35" y="40" font-family="'Inter',sans-serif" font-size="10" font-weight="700" fill="#555555" text-anchor="middle">190</text>
+    <rect x="70" y="14" width="40" height="84" rx="4" fill="#37A3E2"/>
+    <text x="90" y="10" font-family="'Inter',sans-serif" font-size="10" font-weight="700" fill="#37A3E2" text-anchor="middle">328</text>
+    <!-- Arrow -->
+    <text x="62" y="70" font-family="'Inter',sans-serif" font-size="14" fill="#37A3E2">→</text>
+    <!-- Growth label -->
+    <rect x="10" y="108" width="105" height="22" rx="11" fill="#37A3E2" opacity="0.1"/>
+    <text x="62" y="123" font-family="'Inter',sans-serif" font-size="11" font-weight="700" fill="#37A3E2" text-anchor="middle">+72.5% YoY</text>
+  </g>
 
-  <!-- Center text -->
-  <text x="281" y="185" font-family="'Inter', sans-serif" font-size="46" font-weight="800" fill="#111111" text-anchor="middle">50.52%</text>
-  <text x="281" y="212" font-family="'Inter', sans-serif" font-size="13" fill="#555555" text-anchor="middle">4년 평균 영업이익률</text>
+  <!-- Metric 3: Engagement stacked bar -->
+  <g transform="translate(30, 200)">
+    <text x="85" y="12" font-family="'Inter',sans-serif" font-size="11" font-weight="700" fill="#555555" text-anchor="middle">1,100+ Organic</text>
+    <!-- Stacked horizontal bar -->
+    <rect x="0" y="22" width="110" height="20" rx="4" fill="#111111"/>
+    <rect x="110" y="22" width="42" height="20" rx="0" fill="#37A3E2"/>
+    <rect x="152" y="22" width="18" height="20" rx="4" fill="#555555"/>
+    <!-- Legend -->
+    <circle cx="10" cy="62" r="4" fill="#111111"/>
+    <text x="20" y="66" font-family="'Inter',sans-serif" font-size="9" fill="#888888">Likes 786</text>
+    <circle cx="80" cy="62" r="4" fill="#37A3E2"/>
+    <text x="90" y="66" font-family="'Inter',sans-serif" font-size="9" fill="#888888">Comments 151</text>
+    <circle cx="170" cy="62" r="4" fill="#555555"/>
+    <text x="180" y="66" font-family="'Inter',sans-serif" font-size="9" fill="#888888">Shares 75</text>
+  </g>
 
-  <!-- Legend -->
-  <rect x="180" y="270" width="14" height="14" rx="3" fill="#111111"/>
-  <text x="200" y="281" font-family="'Inter', sans-serif" font-size="11" fill="#555555">무노아트 (50.52%)</text>
-  <rect x="310" y="270" width="14" height="14" rx="3" fill="#E5E7EB"/>
-  <text x="330" y="281" font-family="'Inter', sans-serif" font-size="11" fill="#888888">업계 평균 (~25%)</text>
-
-  <!-- Scale labels -->
-  <text x="148" y="202" font-family="'Inter', sans-serif" font-size="10" fill="#aaaaaa" text-anchor="middle">0%</text>
-  <text x="281" y="76" font-family="'Inter', sans-serif" font-size="10" fill="#aaaaaa" text-anchor="middle">50%</text>
-  <text x="414" y="202" font-family="'Inter', sans-serif" font-size="10" fill="#aaaaaa" text-anchor="middle">100%</text>
+  <!-- Metric 4: CAC=0 Donut chart -->
+  <g transform="translate(420, 240)">
+    <!-- Full circle (organic) -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#111111" stroke-width="10"/>
+    <!-- Tiny paid slice (5%) -->
+    <path d="M0,-35 A35,35 0 0,1 10.8,-33.3" fill="none" stroke="#EEEEEE" stroke-width="10"/>
+    <text x="0" y="-2" font-family="'Inter',sans-serif" font-size="14" font-weight="800" fill="#111111" text-anchor="middle">95%</text>
+    <text x="0" y="12" font-family="'Inter',sans-serif" font-size="8" fill="#888888" text-anchor="middle">Organic</text>
+    <text x="0" y="52" font-family="'Inter',sans-serif" font-size="11" font-weight="700" fill="#111111" text-anchor="middle">CAC = 0</text>
+  </g>
 </svg>
